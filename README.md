@@ -16,6 +16,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -30,7 +31,7 @@
 - [📝 License](#license)
 
 
-# 📖 [My Portfolio] <a name="about-project"></a>
+# 📖 [Portfolio] <a name="about-project"></a>
 
 
 
@@ -49,7 +50,10 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Live Demo <a name="live-demo"></a>
 
+
+- [Live Demo Link](https://eccb7.github.io/Portfolio2.0/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
