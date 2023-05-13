@@ -17,6 +17,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [Project Walkthrough](#walkthrough)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -55,6 +56,7 @@
 
 
 - [Live Demo Link](https://eccb7.github.io/Portfolio2.0/)
+- [walkthrough](https://www.loom.com/share/01b07b17b1844f1a902e37006ed7e1df)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
