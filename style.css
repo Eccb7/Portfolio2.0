@@ -271,22 +271,42 @@ a {
   border-radius: 8px; */
 }
 
+.button-container {
+  text-align: center;
+}
+
 .btn {
-  width: 126px;
-  height: 48px;
+  display: inline-block;
+  width: 156px;
+  height: 49px;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.03em;
   background-color: #fff;
   border: 1px solid #6070ff;
   border-radius: 8px;
-  padding: 12px;
+  padding: 10px;
   color: #396df2;
   margin-bottom: 10px;
   cursor: pointer;
   transition: 0.15s;
+  margin-right: 10px;
+}
+
+.btn-text {
+  margin-right: 8px;
+}
+
+.btn-icon {
+  display: inline-block;
+}
+
+.btn-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .btn:hover {
