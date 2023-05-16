@@ -28,11 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
   closeButton.addEventListener("click", closeMenu);
   navItems.forEach(function (navItem) {
     navItem.addEventListener("click", handleMenuItemClick);
-  });
-
-  if (window.innerWidth < 768) {
-    closeButton.style.display = "none";
-  }
 
   if (window.innerWidth > 768) {
     closeButton.style.display = "none";
