@@ -30,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
     navItem.addEventListener("click", handleMenuItemClick);
   });
 
+  if (window.innerWidth < 768) {
+    closeButton.style.display = "none";
+  }
+
   if (window.innerWidth > 768) {
     closeButton.style.display = "none";
   }
