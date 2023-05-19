@@ -39,39 +39,88 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-btn-close]')
-const overlay = document.getElementById('overlay')
+document.addEventListener("DOMContentLoaded", () => {
+  function openModal(modal) {
+    if (modal == null) return;
+    modal.classList.add("active");
+    overlay.classList.add("active");
+  }
 
-openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
-})
+  function closeModal(modal) {
+    if (modal == null) return;
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+  }
 
-overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active')
-  modals.forEach(modal => {
-    closeModal(modal)
-  })
-})
+  const openModalButtons = document.querySelectorAll(
+    '[data-modal-target="#modal"]'
+  );
+  const closeModalButtons = document.querySelectorAll("[data-btn-close]");
+  const overlay = document.getElementById("overlay");
 
-closeModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal')
-    closeModal(modal)
-  })
-})
+  openModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = document.querySelector(
+        button.getAttribute("data-modal-target")
+      );
+      openModal(modal);
+    });
+  });
 
-function openModal(modal) {
-  if (modal == null) return
-  modal.classList.add('active')
-  overlay.classList.add('active')
-}
+  overlay.addEventListener("click", () => {
+    const modals = document.querySelectorAll(".modal.active");
+    modals.forEach((modal) => {
+      closeModal(modal);
+    });
+  });
 
-function closeModal(modal) {
-  if (modal == null) return
-  modal.classList.remove('active')
-  overlay.classList.remove('active')
-}
+  closeModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.closest(".modal");
+      closeModal(modal);
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  function openModal1(modal1) {
+    if (modal1 == null) return;
+    modal1.classList.add("active");
+    overlay1.classList.add("active");
+  }
+
+  function closeModal1(modal1) {
+    if (modal1 == null) return;
+    modal1.classList.remove("active");
+    overlay1.classList.remove("active");
+  }
+
+  const openModal1Buttons = document.querySelectorAll(
+    '[data-modal-target="#modal1"]'
+  );
+  const closeModal1Buttons = document.querySelectorAll("[data-btn-close]");
+  const overlay1 = document.getElementById("overlay1");
+
+  openModal1Buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal1 = document.querySelector(
+        button.getAttribute("data-modal-target")
+      );
+      openModal1(modal1);
+    });
+  });
+
+  overlay1.addEventListener("click", () => {
+    const modal1s = document.querySelectorAll(".modal1.active");
+    modal1s.forEach((modal1) => {
+      closeModal1(modal1);
+    });
+  });
+
+  closeModal1Buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal1 = button.closest(".modal1");
+      closeModal1(modal1);
+    });
+  });
+});
