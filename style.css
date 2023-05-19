@@ -82,7 +82,7 @@ a {
   }
 
   .nav-list .close-button {
-    color: #000000;
+    color: #000;
   }
 
   .nav-list li {
@@ -188,7 +188,7 @@ a {
   .modal.active {
     transform: translate(-50%, -50%) scale(1);
   }
-  
+
   .modal-description {
     padding: 10px 15px;
     display: flex;
@@ -196,7 +196,7 @@ a {
     align-items: center;
     font-weight: bold;
   }
-  
+
   .work-modal-details {
     height: 160px;
     font-weight: 400;
@@ -204,7 +204,7 @@ a {
     line-height: 24px;
     color: #344563;
   }
-  
+
   .modal-description .btn-close {
     cursor: pointer;
     border: none;
@@ -213,11 +213,11 @@ a {
     font-size: 1.25rem;
     font-weight: bold;
   }
-  
+
   .modal-body {
     padding: 10px 15px;
   }
-  
+
   #overlay {
     position: fixed;
     opacity: 0;
@@ -230,7 +230,7 @@ a {
     z-index: 10;
     transition: 200ms ease-in-out;
   }
-  
+
   #overlay.active {
     opacity: 1;
     pointer-events: all;
