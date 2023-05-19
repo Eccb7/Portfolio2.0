@@ -154,3 +154,32 @@ form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
   }
 });
+
+  // Retrieve data from local storage and fill the form
+  function fillFormData() {
+    const formData = JSON.parse(localStorage.getItem('contactFormData'));
+    if (formData) {
+      document.querySelector('input[name="text"]').value = formData.name || '';
+      document.querySelector('input[name="Email"]').value = formData.email || '';
+      document.querySelector('textarea[name="message"]').value =
+        formData.message || '';
+    }
+  }
+
+  // Save form data to local storage
+  function saveFormData() {
+    const name = document.querySelector('input[name="text"]').value;
+    const email = document.querySelector('input[name="Email"]').value;
+    const message = document.querySelector('textarea[name="message"]').value;
+    const formData = { name, email, message };
+    localStorage.setItem('contactFormData', JSON.stringify(formData));
+  }
+
+  // Add event listeners to input fields
+  const inputFields = document.querySelectorAll('#contact-form input, #contact-form textarea');
+  inputFields.forEach((inputField) => {
+    inputField.addEventListener('input', saveFormData);
+  });
+
+  // Fill the form with data on page load
+  fillFormData();
