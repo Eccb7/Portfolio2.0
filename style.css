@@ -82,7 +82,7 @@ a {
   }
 
   .nav-list .close-button {
-    color: #67798e;
+    color: #000000;
   }
 
   .nav-list li {
@@ -113,9 +113,9 @@ a {
   transition: 200ms ease-in-out;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
-  z-index: 10;
+  z-index: 999;
   background-color: #fff;
-  width: 347px;
+  width: 100%;
   max-width: 80%;
 }
 
@@ -129,6 +129,14 @@ a {
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
+}
+
+.work-modal-details {
+  height: 160px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
 }
 
 .modal-description .btn-close {
@@ -147,21 +155,88 @@ a {
 #overlay {
   position: fixed;
   opacity: 0;
-  transition: 200ms ease-in-out;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: #c1c7d0;
-  mix-blend-mode: multiply;
-  backdrop-filter: blur(8px);
+  width: 100%;
+  height: 100%;
+  background: rgba(193, 199, 208, 0.8);
   pointer-events: none;
+  z-index: 10;
+  transition: 200ms ease-in-out;
 }
 
 #overlay.active {
   opacity: 1;
   pointer-events: all;
 }
+
+/* @media screen and (min-width: 768px) {
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    z-index: 999;
+    background-color: #fff;
+    width: 769px;
+    max-width: 1444px;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-description {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .work-modal-details {
+    height: 160px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #344563;
+  }
+  
+  .modal-description .btn-close {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    padding: 10px 15px;
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(193, 199, 208, 0.8);
+    pointer-events: none;
+    z-index: 10;
+    transition: 200ms ease-in-out;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+} */
 
 .hero-section {
   background: #fff;
@@ -586,6 +661,72 @@ textarea::placeholder {
     font-weight: bold;
   }
 
+  .modal1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    z-index: 999;
+    background-color: #fff;
+    width: 60%;
+    max-width: 80%;
+    height: 84%;
+  }
+
+  .modal1.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal1-description {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .work-modal1-details {
+    height: 160px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #344563;
+  }
+
+  .modal1-description .btn-close1 {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .modal1-body {
+    padding: 10px 15px;
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(193, 199, 208, 0.8);
+    pointer-events: none;
+    z-index: 10;
+    transition: 200ms ease-in-out;
+  }
+
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
   .hero-section {
     background-image: url(images/Header-bg.svg);
     background-size: 100% 691.46px;
@@ -648,10 +789,10 @@ textarea::placeholder {
     max-width: 1156px;
   }
 
-  .project:hover {
+  /* .project:hover {
     cursor: pointer;
     border: 2px solid #a7aeff;
-  }
+  } */
 
   .work-img {
     display: grid;
