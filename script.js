@@ -125,32 +125,26 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Get the form element and the error message element
-const form = document.querySelector('form');
-const errorMessage = document.createElement('p');
-errorMessage.style.color = 'red';
+const form = document.querySelector("form");
+const errorMessage = document.createElement("p");
+errorMessage.style.color = "red";
 
-// Function to validate the email field
 function validateEmail() {
   const emailInput = document.querySelector('input[type="email"]');
   const email = emailInput.value;
 
-  // Check if the email is in lowercase
   if (email !== email.toLowerCase()) {
-    errorMessage.textContent = 'Please enter the email address in lowercase.';
+    errorMessage.textContent = "Please enter the email address in lowercase.";
     form.appendChild(errorMessage);
     return false;
   }
 
-  // If the email is in lowercase, remove any error message and allow form submission
-  errorMessage.textContent = '';
+  errorMessage.textContent = "";
   return true;
 }
 
-// Handle form submission
-form.addEventListener('submit', function(event) {
-  // Validate the email field
+form.addEventListener("submit", function (event) {
   if (!validateEmail()) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
   }
 });
