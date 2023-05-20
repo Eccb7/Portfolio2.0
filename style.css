@@ -42,11 +42,7 @@ img {
   width: 100%;
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  overflow: auto;
-  padding: 0 40px;
+
 }
 
 /* Navbar */
@@ -88,13 +84,6 @@ img {
   display: none;
 }
 
-/* .showcase */
-.showcase {
-  position: relative;
-  top: 70px;
-  background-color: #fff;
-  background-image: url("images/Header-bg.svg");
-  background-position: center 30px;
   background-repeat: no-repeat;
   background-size: 100%;
   border-bottom-left-radius: 160px;

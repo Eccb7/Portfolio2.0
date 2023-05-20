@@ -30,4 +30,3 @@ window.onresize = () => {
     blurBg.style.display = "none";
     document.body.style.overflow = "auto";
   }
-};
