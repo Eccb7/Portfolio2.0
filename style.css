@@ -52,7 +52,7 @@ a {
 }
 
 .close-button {
-  background-color: transparent;
+  /* background-color: transparent; */
   border: none;
   color: #fff;
   cursor: pointer;
