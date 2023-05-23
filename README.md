@@ -131,6 +131,11 @@ To run tests, run the following command:
 - Twitter: [@briton_otieno4](https://twitter.com/briton_otieno4)
 - LinkedIn: [briton-otieno-ba6591244](https://linkedin.com/in/briton-otieno-ba6591244)
 
+👤 **Haben Mehari**
+
+- GitHub: [@habitoz](https://github.com/habitoz)
+- Linkedin: [@habitoz](https://www.linkedin.com/in/haben-mehari-593531140)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
