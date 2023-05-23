@@ -12,7 +12,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body onload="displayProjects()">
   <header id="navigation">
     <a href="#" class="logo">My Logo</a>
     <nav>
@@ -77,6 +77,27 @@
   </section>
 
   <section id="work-section-mobile">
+    <div id="projects-container-mobile"></div>
+    <div id="popup-container" class="popup-container">
+      <div id="popup" class="popup">
+        <button id="close-button1" class="close-button1">&times;</button>
+        <div id="popup-content"></div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="work-section-desktop">
+    <div id="projects-container-desktop"></div>
+    <div id="popup-container" class="popup-container">
+      <div id="popup" class="popup">
+        <button id="close-button" class="close-button1">&times;</button>
+        <div id="popup-content"></div>
+      </div>
+    </div>
+  </section>
+   
+
+  <!-- <section id="work-section-mobile">
     <div class="project">
       <div class="work-img">
         <img src="images/Snapshoot-Portfolio.svg" alt="tonic image" />
@@ -580,9 +601,9 @@
           </div>
           <div id="overlay1"></div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="project two">
+    <!-- <div class="project two">
       <div class="work-img">
         <img src="images/multi-post.svg" alt="tonic image" />
       </div>
@@ -606,7 +627,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section id="about">
     <div class="about-container">
@@ -710,6 +731,7 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script src="display.js"></script>
 </body>
 
 </html>
