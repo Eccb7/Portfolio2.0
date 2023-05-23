@@ -52,12 +52,15 @@ a {
 }
 
 .close-button {
-  background-color: transparent;
+  /* background-color: transparent; */
   border: none;
   color: #fff;
   cursor: pointer;
   font-size: 18px;
   padding: 0;
+  float: right;
+  margin-top: 30px;
+  margin-right: 100px;
 }
 
 .close-button:hover {
@@ -82,7 +85,14 @@ a {
   }
 
   .nav-list .close-button {
-    color: #000;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin-top: 20px;
+    margin-right: 20px;
   }
 
   .nav-list li {
@@ -97,9 +107,9 @@ a {
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    line-height: 44px;
+    line-height: 16px;
     padding: 10px;
-    gap: 8px;
+    gap: 4px;
     color: #fff;
     text-decoration: none;
   }
