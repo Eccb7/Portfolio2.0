@@ -52,7 +52,6 @@ a {
 }
 
 .close-button {
-  /* background-color: transparent; */
   border: none;
   color: #fff;
   cursor: pointer;
@@ -134,7 +133,7 @@ a {
   top: 50%;
   left: 50%;
   width: 80%;
-  height: 800px;
+  height: 750px;
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 16px;
@@ -713,13 +712,14 @@ textarea::placeholder {
     top: 50%;
     left: 50%;
     width: 80%;
-    height: 713px;
+    height: 820px;
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 16px;
     box-sizing: border-box;
     border: 1px solid #dfe1e6;
     border-radius: 16px;
+    overflow-y: scroll;
   }
 
   .work-img {
