@@ -63,26 +63,25 @@ var projectsContainerMobile = document.getElementById(
 var projectsContainerDesktop = document.getElementById(
   "projects-container-desktop"
 );
-var popupContainer = document.getElementById("popup-container");
-var popupContent = document.getElementById("popup-content");
-var closeButton = document.getElementById("close-button1");
+var popupContainer = document.getElementById("popupContainer");
+var popupContentMobile = document.getElementById("popupContentMobile");
+var popupContentDesktop = document.getElementById("popupContentDesktop");
+var closeButton = document.getElementById("closeButton");
 
 for (var i = 0; i < projects.length; i++) {
   var project = projects[i];
   var projectElementMobile = createProjectElement(project);
   var projectElementDesktop = projectElementMobile.cloneNode(true);
 
-  projectElementMobile.addEventListener("click", createPopupHandler(project));
-  projectElementDesktop.addEventListener("click", createPopupHandler(project));
+  projectElementMobile.addEventListener("click", function () {
+    showPopup(project);
+  });
+  projectElementDesktop.addEventListener("click", function () {
+    showPopup(project);
+  });
 
   projectsContainerMobile.appendChild(projectElementMobile);
   projectsContainerDesktop.appendChild(projectElementDesktop);
-}
-
-function createPopupHandler(project) {
-  return function () {
-    showPopup(project);
-  };
 }
 
 function createProjectElement(project) {
@@ -151,6 +150,16 @@ function createProjectElement(project) {
 }
 
 function showPopup(project) {
+  var popupContent;
+
+  if (window.innerWidth > 768) {
+    popupContentDesktop.innerHTML = "";
+    popupContent = popupContentDesktop;
+  } else {
+    popupContentMobile.innerHTML = "";
+    popupContent = popupContentMobile;
+  }
+
   popupContent.innerHTML = "";
 
   var projectTitle = document.createElement("h2");
@@ -218,12 +227,6 @@ function showPopup(project) {
   popupButtons.appendChild(seeSourceButton);
 
   popupContent.appendChild(popupButtons);
-
-  if (window.innerWidth > 768) {
-    popupContainer.classList.add("desktop-popup");
-  } else {
-    popupContainer.classList.remove("desktop-popup");
-  }
 
   popupContainer.style.display = "block";
 }
