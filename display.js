@@ -69,9 +69,20 @@ var closeButton = document.getElementById("close-button1");
 
 for (var i = 0; i < projects.length; i++) {
   var project = projects[i];
-  var projectElement = createProjectElement(project);
-  projectsContainerMobile.appendChild(projectElement);
-  projectsContainerDesktop.appendChild(projectElement.cloneNode(true));
+  var projectElementMobile = createProjectElement(project);
+  var projectElementDesktop = projectElementMobile.cloneNode(true);
+
+  projectElementMobile.addEventListener("click", createPopupHandler(project));
+  projectElementDesktop.addEventListener("click", createPopupHandler(project));
+
+  projectsContainerMobile.appendChild(projectElementMobile);
+  projectsContainerDesktop.appendChild(projectElementDesktop);
+}
+
+function createPopupHandler(project) {
+  return function () {
+    showPopup(project);
+  };
 }
 
 function createProjectElement(project) {
@@ -89,6 +100,11 @@ function createProjectElement(project) {
   var workDescription = document.createElement("div");
   workDescription.className = "work-description";
 
+  var workTitle = document.createElement("h2");
+  workTitle.className = "work-title";
+  workTitle.textContent = project.name;
+  workDescription.appendChild(workTitle);
+
   var rolePlatformYearList = document.createElement("ul");
   rolePlatformYearList.className = "role-platform-year-list";
   var roleItem = document.createElement("li");
@@ -96,19 +112,14 @@ function createProjectElement(project) {
   roleItem.textContent = project.role;
   rolePlatformYearList.appendChild(roleItem);
   var platformItem = document.createElement("li");
-  // platformItem.className = "platform-item";
+  platformItem.className = "platform-item";
   platformItem.textContent = project.platform;
   rolePlatformYearList.appendChild(platformItem);
   var yearItem = document.createElement("li");
-  // yearItem.className = "year-item";
+  yearItem.className = "year-item";
   yearItem.textContent = project.year;
   rolePlatformYearList.appendChild(yearItem);
   workDescription.appendChild(rolePlatformYearList);
-
-  var workTitle = document.createElement("h2");
-  workTitle.className = "work-title";
-  workTitle.textContent = project.name;
-  workDescription.appendChild(workTitle);
 
   var workDetails = document.createElement("p");
   workDetails.className = "work-details";
@@ -146,9 +157,26 @@ function showPopup(project) {
   projectTitle.textContent = project.name;
   popupContent.appendChild(projectTitle);
 
+  var rolePlatformYearList = document.createElement("ul");
+  rolePlatformYearList.className = "role-platform-year-list";
+  var roleItem = document.createElement("li");
+  roleItem.className = "role-item";
+  roleItem.textContent = project.role;
+  rolePlatformYearList.appendChild(roleItem);
+  var platformItem = document.createElement("li");
+  platformItem.className = "platform-item";
+  platformItem.textContent = project.platform;
+  rolePlatformYearList.appendChild(platformItem);
+  var yearItem = document.createElement("li");
+  yearItem.className = "year-item";
+  yearItem.textContent = project.year;
+  rolePlatformYearList.appendChild(yearItem);
+  popupContent.appendChild(rolePlatformYearList);
+
   var projectImage = document.createElement("img");
   projectImage.src = project.featuredImage;
   projectImage.alt = project.name + " image";
+  projectImage.classList.add("popup-image");
   popupContent.appendChild(projectImage);
 
   var projectDetails = document.createElement("p");
@@ -166,6 +194,10 @@ function showPopup(project) {
     technologiesList.appendChild(technologyItem);
   }
   popupButtons.appendChild(technologiesList);
+
+  var borderLine = document.createElement("div");
+  borderLine.className = "popup-border-line";
+  popupContent.appendChild(borderLine);
 
   var seeLiveButton = document.createElement("button");
   seeLiveButton.className = "btn popup-see-live";
