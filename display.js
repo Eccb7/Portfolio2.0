@@ -69,19 +69,20 @@ var popupContentDesktop = document.getElementById("popupContentDesktop");
 var closeButton = document.getElementById("closeButton");
 
 for (var i = 0; i < projects.length; i++) {
-  var project = projects[i];
-  var projectElementMobile = createProjectElement(project);
-  var projectElementDesktop = projectElementMobile.cloneNode(true);
+  (function (project) { // Wrap the code inside an IIFE
+    var projectElementMobile = createProjectElement(project);
+    var projectElementDesktop = projectElementMobile.cloneNode(true);
 
-  projectElementMobile.addEventListener("click", function () {
-    showPopup(project);
-  });
-  projectElementDesktop.addEventListener("click", function () {
-    showPopup(project);
-  });
+    projectElementMobile.addEventListener("click", function () {
+      showPopup(project);
+    });
+    projectElementDesktop.addEventListener("click", function () {
+      showPopup(project);
+    });
 
-  projectsContainerMobile.appendChild(projectElementMobile);
-  projectsContainerDesktop.appendChild(projectElementDesktop);
+    projectsContainerMobile.appendChild(projectElementMobile);
+    projectsContainerDesktop.appendChild(projectElementDesktop);
+  })(projects[i]); // Pass the current project as an argument to the IIFE
 }
 
 function createProjectElement(project) {
