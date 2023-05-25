@@ -954,6 +954,21 @@ textarea::placeholder {
   .contact-container p {
     width: 56%;
   }
+  .project-detail-wrapper {
+    margin-top: 10px;
+    display: flex;
+    align-items: start;
+    gap:10px;
+  }
+  .project-detail-content {
+    margin-top: 0px !important;
+    margin-bottom: 10px;
+    width: 67%;
+  }
+  .popup-button-wrapper {
+    display: flex;
+    margin-top:10px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {

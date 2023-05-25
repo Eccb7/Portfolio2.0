@@ -189,9 +189,13 @@ function showPopup(project) {
   projectImage.classList.add("popup-image");
   popupContent.appendChild(projectImage);
 
+  const projectDetailWrapper = document.createElement('div');
+  projectDetailWrapper.classList.add('project-detail-wrapper');
+
   var projectDetails = document.createElement("p");
+  projectDetails.classList.add('project-detail-content');
   projectDetails.textContent = project.descriptionlong;
-  popupContent.appendChild(projectDetails);
+  projectDetailWrapper.appendChild(projectDetails);
 
   var popupButtons = document.createElement("div");
   popupButtons.className = "popup-buttons";
@@ -207,7 +211,10 @@ function showPopup(project) {
 
   var borderLine = document.createElement("div");
   borderLine.className = "popup-border-line";
-  popupContent.appendChild(borderLine);
+  projectDetailWrapper.appendChild(borderLine);
+
+  const popupButtonWrapper = document.createElement('div');
+  popupButtonWrapper.classList.add('popup-button-wrapper');
 
   var seeLiveButton = document.createElement("button");
   seeLiveButton.className = "btn popup-see-live";
@@ -216,7 +223,7 @@ function showPopup(project) {
   seeLiveButton.addEventListener("click", function () {
     window.open(project.liveLink, "_blank");
   });
-  popupButtons.appendChild(seeLiveButton);
+  popupButtonWrapper.appendChild(seeLiveButton);
 
   var seeSourceButton = document.createElement("button");
   seeSourceButton.className = "btn popup-see-source";
@@ -225,9 +232,13 @@ function showPopup(project) {
   seeSourceButton.addEventListener("click", function () {
     window.open(project.sourceLink, "_blank");
   });
-  popupButtons.appendChild(seeSourceButton);
+  popupButtonWrapper.appendChild(seeSourceButton);
 
-  popupContent.appendChild(popupButtons);
+  popupButtons.appendChild(popupButtonWrapper);
+  
+  projectDetailWrapper.appendChild(popupButtons);
+  
+  popupContent.appendChild(projectDetailWrapper);
 
   popupContainer.style.display = "block";
 }
