@@ -41,20 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const form = document.querySelector("form");
 const errorMessage = document.createElement("p");
-errorMessage.classList.add('form-error-message')
 errorMessage.style.color = "red";
 
 function validateEmail() {
   const emailInput = document.querySelector('input[type="email"]');
-  const formErrorInDOM = document.querySelector('.form-error-message');
   const email = emailInput.value;
 
   if (email !== email.toLowerCase()) {
     errorMessage.textContent = "Please enter the email address in lowercase.";
-    formErrorInDOM ? form.appendChild(errorMessage) : '';
+    form.appendChild(errorMessage);
     return false;
   }
-  
+
   errorMessage.textContent = "";
   return true;
 }
