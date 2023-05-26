@@ -62,3 +62,30 @@ form.addEventListener("submit", function (event) {
     event.preventDefault();
   }
 });
+
+function fillFormData() {
+  const formData = JSON.parse(localStorage.getItem("contactFormData"));
+  if (formData) {
+    document.querySelector('input[name="name"]').value = formData.name || "";
+    document.querySelector('input[name="email"]').value = formData.email || "";
+    document.querySelector('textarea[name="message"]').value =
+      formData.message || "";
+  }
+}
+
+function saveFormData(event) {
+  const existingData = localStorage.getItem('contactFormData');
+
+  const formData = existingData ?{...(JSON.parse(existingData)), [event.target.name]: event.target.value }: { [event.target.name]: event.target.value };
+  localStorage.setItem("contactFormData", JSON.stringify(formData));
+}
+
+const inputFields = document.querySelectorAll(
+  "#contact-form input, #contact-form textarea"
+);
+
+inputFields.forEach((inputField) => {
+  inputField.addEventListener("input", saveFormData);
+});
+
+fillFormData();
