@@ -1,17 +1,17 @@
 var projects = [
   {
-    name: "Tonic",
-    role: "CANOPY",
-    platform: "Back-End Dev",
-    year: "2015",
+    name: "Math Symposium",
+    role: "Developer",
+    platform: "Front-end",
+    year: "2023",
     description:
-      "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+      "THE MATHEMATICS ANNUAL GLOBAL SYMPOSIUM.",
     descriptionlong:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
+      "The Mathematics Annual Global Symposium is a prestigious event organized with a motivation to provide an excellent international platform for the academicians, researchers, engineers, industrial participants and budding students around the world to SHARE their research findings with the global experts.",
     featuredImage: "images/qwerty.png",
     technologies: ["HTML", "CSS", "Javascript"],
-    liveLink: "https://eccb7.github.io/Portfolio2.0/",
-    sourceLink: "https://github.com/Eccb7/Portfolio2.0",
+    liveLink: "https://eccb7.github.io/Capstone_Project-1/",
+    sourceLink: "https://github.com/Eccb7/Capstone_Project-1",
   },
   {
     name: "Multi-Post Stories",
